@@ -1,0 +1,17 @@
+{
+ "name": "vite-ssr-template",
+ "private": true,
+ "scripts": {
+   "dev": "node server",
+   "build": "npm run build:client && npm run build:server",
+   "build:client": "vite build --outDir dist/client",
+   "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+   "serve": "NODE_ENV=production node server"
+ },
+ "dependencies": {
+   "react": "^18.2.0",
+   "react-dom": "^18.2.0",
+   "react-router-dom": "^7.0.0",
+   "express": "^4.18.2"
+ }
+}
